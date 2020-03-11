@@ -1,13 +1,19 @@
 console.log("test");
+// divs; hour, event-name, edit-div, edit-btn
+    //timeblock is row div
+    //#today should display todays date
 
 
 
 
+function displayDate(){
+console.log("this function will display the date");
 
+}
 // ***************** MAINAPP **************************
 //function to adjust color of active element... 
     //avtivation or can do thru timeclock directly?
-
+$(document).ready(displayDate());
 
 
     // hour, event-name, edit as 3 main compenents within timeblock (all classes)

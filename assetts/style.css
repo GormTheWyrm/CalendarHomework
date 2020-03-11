@@ -19,6 +19,7 @@ border-right: solid grey;
 display: inline-block;
 border-top: solid grey;
 border-bottom: solid grey;
+text-align: left;
 }
 .event-name{
     display: inline-block;
@@ -27,11 +28,20 @@ border-bottom: solid grey;
     border-left:solid grey;
     border-right: solid grey;
 }
-.edit{
+/* .edit{
     border-left: solid grey;
     border-bottom: grey;
     border-top: grey;
     border-right: grey;
     /* display: inline-block; */
     /* may want to unround edges... */
+/* }  */
+
+@media only screen and (max-width: 640px){
+    .responsive-text{
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        left: -15px;
+        }
 }
