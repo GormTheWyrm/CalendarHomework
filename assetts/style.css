@@ -28,14 +28,10 @@ text-align: left;
     border-left:solid grey;
     border-right: solid grey;
 }
-/* .edit{
-    border-left: solid grey;
-    border-bottom: grey;
-    border-top: grey;
-    border-right: grey;
-    /* display: inline-block; */
-    /* may want to unround edges... */
-/* }  */
+.edit-div{
+    /* margin-left: 0px; */
+    padding-left: 2px;
+}
 
 @media only screen and (max-width: 640px){
     .responsive-text{
@@ -44,4 +40,6 @@ text-align: left;
         position: relative;
         left: -15px;
         }
+        /* I need to fix this later probably */
 }
+/* this may break on really small screens */
