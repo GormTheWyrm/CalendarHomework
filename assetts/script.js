@@ -33,9 +33,15 @@ function displayDate() {
     $("#today").text(weekDay);
     }
 
-    
+
     function setHours() {
         //should use .getHours() to set background colors of event-name (div)
+    }
+    function upDateEvent(){
+
+    }
+    function upDateTime(){
+        
     }
 
 
@@ -46,6 +52,8 @@ function displayDate() {
     //displays todays date on top- not working yet
     $(document).ready(displayDate());
     $(document).ready(setHours());
+    $(document).ready(upDateEvent());
+    $(document).ready(upDateTime());
 
 //add ready method to change each event-name div background color based on time
 //add event listener to all edit-btn
