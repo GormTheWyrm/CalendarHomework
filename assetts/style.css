@@ -1,0 +1,37 @@
+body{
+    color: brown;
+    /* test link to stylesheet */
+}
+/* active-time class which JS can change? */
+.timeblock{
+    /* border-top: solid grey;
+    border-bottom: solid grey; */
+    /* display: inline-block; */
+    /* width should be 100%... */
+    height: 50px;
+    margin-bottom: 1px;
+    /* not sure if I like this */
+}
+/* hour, event-name, edit as 3 main compenents within timeblock 
+edit is now a button*/
+.hour{
+border-right: solid grey;
+display: inline-block;
+border-top: solid grey;
+border-bottom: solid grey;
+}
+.event-name{
+    display: inline-block;
+    border-top: solid grey;
+    border-bottom: solid grey;
+    border-left:solid grey;
+    border-right: solid grey;
+}
+.edit{
+    border-left: solid grey;
+    border-bottom: grey;
+    border-top: grey;
+    border-right: grey;
+    /* display: inline-block; */
+    /* may want to unround edges... */
+}
