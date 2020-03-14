@@ -41,6 +41,8 @@ function displayDay() {
 
 
 
+
+
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function setColors() {
     //should  set background colors of event-name (div)
@@ -256,6 +258,7 @@ function saveEvents(){
     //might need to set up some sort of event to trigger the eventname region...
     //and remove stop propagation?
 
+    console.log(this.$("event-name"));
     
     }
 

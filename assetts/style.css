@@ -1,5 +1,6 @@
 body{
-    color: brown;
+    color: black;
+    font-weight: 500;
     /* test link to stylesheet */
 }
 /* active-time class which JS can change? */
