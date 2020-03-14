@@ -1,4 +1,6 @@
-console.log("test");
+//https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
+
+
 // divs; hour, event-name, edit-div, edit-btn
 //timeblock is row div
 //#today should display todays date
@@ -7,7 +9,10 @@ console.log("test");
 //is get hour 0-24?
 
 
-function displayDate() {
+
+
+
+function displayDay() {
     console.log("this function will display the date");
     //can I put grab the date from an online calendar?
     var todayDate = new Date();
@@ -31,29 +36,277 @@ function displayDate() {
     }
     var dateSet = $("#today");
     $("#today").text(weekDay);
-    }
+}
+
+//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function setColors() {
+    //should  set background colors of event-name (div)
+    console.log("this function will display the colors based on time");
+    //FIXME
+    var myDate = new Date();
+    var currentHour = myDate.getHours();
+    currentHour = parseInt(currentHour);
+    // console.log(myDate);
+    console.log(currentHour);
+    // changeColors();
+    //change background color of ids less than currentHour...
+    var hour7 = $("#seven");
+    var hour8 = $("#eight");
+    var hour9 = $("#nine");
+    var hour10 = $("#ten");
+    var hour11 = $("#eleven");
+    var hour12 = $("#twelve");
+    var hour1 = $("#one");
+    var hour2 = $("#two");
+    var hour3 = $("#three");
+    var hour4 = $("#four");
+    var hour5 = $("#five");
+    var hour6 = $("#six");
+
+    /*
+  $("#seven");
+  $("#eight");
+    $("#nine");
+     $("#ten");
+      $("#eleven");
+      $("#twelve");
+      $("#one");
+      $("#two");
+      $("#three");
+      $("#four");
+      $("#five");
+      $("#six");
+      this might work better by updatign each object individually... so within the load aspect of the load functin, using "this"
+      */
 
 
-    function setHours() {
-        //should use .getHours() to set background colors of event-name (div)
-    }
-    function upDateEvent(){
+    //set all to grey
+    //.timeblock
+    $(".timeblock").css("background-color", "lightgrey");
 
-    }
-    function upDateTime(){
+    if (currentHour < 7) {
+        $(".timeblock").css("background-color", "green");      
+
+    } else if (currentHour === 7) {
+        $("#seven").css("background-color", "lightcoral");
+        $("#eight").css("background-color", "green");
+        $("#nine").css("background-color", "green");
+        $("#ten").css("background-color", "green");
+        $("#eleven").css("background-color", "green");
+        $("#twelve").css("background-color", "green");
+        $("#one").css("background-color", "green");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+
+    } else if (currentHour === 8) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "lightcoral");
+        $("#nine").css("background-color", "green");
+        $("#ten").css("background-color", "green");
+        $("#eleven").css("background-color", "green");
+        $("#twelve").css("background-color", "green");
+        $("#one").css("background-color", "green");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 9) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "lightcoral");
+        $("#ten").css("background-color", "green");
+        $("#eleven").css("background-color", "green");
+        $("#twelve").css("background-color", "green");
+        $("#one").css("background-color", "green");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 10) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "lightcoral");
+        $("#eleven").css("background-color", "green");
+        $("#twelve").css("background-color", "green");
+        $("#one").css("background-color", "green");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 11) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "lightcoral");
+        $("#twelve").css("background-color", "green");
+        $("#one").css("background-color", "green");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 12) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "lightcoral");
+        $("#one").css("background-color", "green");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 13) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "lightcoral");
+        $("#two").css("background-color", "green");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 14) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "grey");
+        $("#two").css("background-color", "lightcoral");
+        $("#three").css("background-color", "green");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 15) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "grey");
+        $("#two").css("background-color", "grey");
+        $("#three").css("background-color", "lightcoral");
+        $("#four").css("background-color", "green");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 16) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "grey");
+        $("#two").css("background-color", "grey");
+        $("#three").css("background-color", "grey");
+        $("#four").css("background-color", "lightcoral");
+        $("#five").css("background-color", "green");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 17) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "grey");
+        $("#two").css("background-color", "grey");
+        $("#three").css("background-color", "grey");
+        $("#four").css("background-color", "grey");
+        $("#five").css("background-color", "lightcoral");
+        $("#six").css("background-color", "green");
+    } else if (currentHour === 18) {
+        $("#six").css("background-color", "green");
+    } else {
+        $(".timeblock").css("background-color", "lightcoral");
         
     }
 
+}
+function upDateEvent() {
+    console.log("this function will save events");
+    //may also delete them? need to figure out how writing
+    //perhaps this function, maybe call another function- to save to local storage...
+    //first save event to local
+    //now update page
+    loadEvents();
 
-    // ***************** MAINAPP **************************
+}
+// function upDateTime(){
+//     console.log("this function will refresh...");
+//     //may not implement this... was going to have system periodically reload events and check the hour...
+// }
+function loadEvents() {
+    //sets day of the week at the top
+    displayDay();
+    setColors();
+
+    //main function that loads page...
+    //first load content for each event (from local storage)
+    //then get time (hours)
+    //then set background colors based on time
+
+    //should this reset day of the week?
+
+
+
+}
+
+
+
+
+
+
+// ***************** MAINAPP **************************
+
+
+
+$(document).ready(loadEvents());        //main function that ses up page
+//should get data from local storage and display it as events...
+//currently empty
+//should call another function that udpates colors based on time
+
+
+$(document).ready($(".edit-btn").on("click", function () {
+    //function that saves data
+    upDateEvent();
+}));
+
+
+
+
+
+
+
+
+     //   
     //function to adjust color of active element... 
     //avtivation or can do thru timeclock directly?
 
-    //displays todays date on top- not working yet
-    $(document).ready(displayDate());
-    $(document).ready(setHours());
-    $(document).ready(upDateEvent());
-    $(document).ready(upDateTime());
+    //need a function to load saved events
+
+
+
+
+
+    // $(document).ready(upDateTime());
+        //this should update app every 20 minutes... ask if thats a good idea
 
 //add ready method to change each event-name div background color based on time
 //add event listener to all edit-btn
@@ -75,6 +328,3 @@ function displayDate() {
 //add span upon submit?
 
 
-
-        // MAIN APP************
-        //call function here
