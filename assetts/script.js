@@ -38,6 +38,9 @@ function displayDay() {
     $("#today").text(weekDay);
 }
 
+
+
+
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function setColors() {
     //should  set background colors of event-name (div)
@@ -61,24 +64,10 @@ function setColors() {
     var hour3 = $("#three");
     var hour4 = $("#four");
     var hour5 = $("#five");
-    var hour6 = $("#six");
+    var lastHour = $("#six");
 
-    /*
-  $("#seven");
-  $("#eight");
-    $("#nine");
-     $("#ten");
-      $("#eleven");
-      $("#twelve");
-      $("#one");
-      $("#two");
-      $("#three");
-      $("#four");
-      $("#five");
-      $("#six");
-      this might work better by updatign each object individually... so within the load aspect of the load functin, using "this"
-      */
 
+    
 
     //set all to grey
     //.timeblock
@@ -88,7 +77,7 @@ function setColors() {
         $(".timeblock").css("background-color", "green");      
 
     } else if (currentHour === 7) {
-        $("#seven").css("background-color", "lightcoral");
+        $("#seven").css("background-color", "red");
         $("#eight").css("background-color", "green");
         $("#nine").css("background-color", "green");
         $("#ten").css("background-color", "green");
@@ -103,7 +92,7 @@ function setColors() {
 
     } else if (currentHour === 8) {
         $("#seven").css("background-color", "grey");
-        $("#eight").css("background-color", "lightcoral");
+        $("#eight").css("background-color", "red");
         $("#nine").css("background-color", "green");
         $("#ten").css("background-color", "green");
         $("#eleven").css("background-color", "green");
@@ -117,7 +106,7 @@ function setColors() {
     } else if (currentHour === 9) {
         $("#seven").css("background-color", "grey");
         $("#eight").css("background-color", "grey");
-        $("#nine").css("background-color", "lightcoral");
+        $("#nine").css("background-color", "red");
         $("#ten").css("background-color", "green");
         $("#eleven").css("background-color", "green");
         $("#twelve").css("background-color", "green");
@@ -131,7 +120,7 @@ function setColors() {
         $("#seven").css("background-color", "grey");
         $("#eight").css("background-color", "grey");
         $("#nine").css("background-color", "grey");
-        $("#ten").css("background-color", "lightcoral");
+        $("#ten").css("background-color", "red");
         $("#eleven").css("background-color", "green");
         $("#twelve").css("background-color", "green");
         $("#one").css("background-color", "green");
@@ -145,7 +134,7 @@ function setColors() {
         $("#eight").css("background-color", "grey");
         $("#nine").css("background-color", "grey");
         $("#ten").css("background-color", "grey");
-        $("#eleven").css("background-color", "lightcoral");
+        $("#eleven").css("background-color", "red");
         $("#twelve").css("background-color", "green");
         $("#one").css("background-color", "green");
         $("#two").css("background-color", "green");
@@ -159,7 +148,7 @@ function setColors() {
         $("#nine").css("background-color", "grey");
         $("#ten").css("background-color", "grey");
         $("#eleven").css("background-color", "grey");
-        $("#twelve").css("background-color", "lightcoral");
+        $("#twelve").css("background-color", "red");
         $("#one").css("background-color", "green");
         $("#two").css("background-color", "green");
         $("#three").css("background-color", "green");
@@ -173,7 +162,7 @@ function setColors() {
         $("#ten").css("background-color", "grey");
         $("#eleven").css("background-color", "grey");
         $("#twelve").css("background-color", "grey");
-        $("#one").css("background-color", "lightcoral");
+        $("#one").css("background-color", "red");
         $("#two").css("background-color", "green");
         $("#three").css("background-color", "green");
         $("#four").css("background-color", "green");
@@ -187,7 +176,7 @@ function setColors() {
         $("#eleven").css("background-color", "grey");
         $("#twelve").css("background-color", "grey");
         $("#one").css("background-color", "grey");
-        $("#two").css("background-color", "lightcoral");
+        $("#two").css("background-color", "red");
         $("#three").css("background-color", "green");
         $("#four").css("background-color", "green");
         $("#five").css("background-color", "green");
@@ -201,7 +190,7 @@ function setColors() {
         $("#twelve").css("background-color", "grey");
         $("#one").css("background-color", "grey");
         $("#two").css("background-color", "grey");
-        $("#three").css("background-color", "lightcoral");
+        $("#three").css("background-color", "red");
         $("#four").css("background-color", "green");
         $("#five").css("background-color", "green");
         $("#six").css("background-color", "green");
@@ -215,7 +204,7 @@ function setColors() {
         $("#one").css("background-color", "grey");
         $("#two").css("background-color", "grey");
         $("#three").css("background-color", "grey");
-        $("#four").css("background-color", "lightcoral");
+        $("#four").css("background-color", "red");
         $("#five").css("background-color", "green");
         $("#six").css("background-color", "green");
     } else if (currentHour === 17) {
@@ -229,21 +218,55 @@ function setColors() {
         $("#two").css("background-color", "grey");
         $("#three").css("background-color", "grey");
         $("#four").css("background-color", "grey");
-        $("#five").css("background-color", "lightcoral");
+        $("#five").css("background-color", "red");
         $("#six").css("background-color", "green");
+
     } else if (currentHour === 18) {
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "grey");
+        $("#two").css("background-color", "grey");
+        $("#three").css("background-color", "grey");
+        $("#four").css("background-color", "grey");
+        $("#five").css("background-color", "grey");
         $("#six").css("background-color", "green");
     } else {
-        $(".timeblock").css("background-color", "lightcoral");
+        $("#seven").css("background-color", "grey");
+        $("#eight").css("background-color", "grey");
+        $("#nine").css("background-color", "grey");
+        $("#ten").css("background-color", "grey");
+        $("#eleven").css("background-color", "grey");
+        $("#twelve").css("background-color", "grey");
+        $("#one").css("background-color", "grey");
+        $("#two").css("background-color", "grey");
+        $("#three").css("background-color", "grey");
+        $("#four").css("background-color", "grey");
+        $("#five").css("background-color", "grey");
+        $("#six").css("background-color", "grey");
         
     }
-
 }
-function upDateEvent() {
+
+function saveEvents(){
     console.log("this function will save events");
+    //might need to set up some sort of event to trigger the eventname region...
+    //and remove stop propagation?
+
+    
+    }
+
+function upDateEvent() {
+
     //may also delete them? need to figure out how writing
     //perhaps this function, maybe call another function- to save to local storage...
     //first save event to local
+    saveEvents();
+    //will save div text to local...
+
     //now update page
     loadEvents();
 
