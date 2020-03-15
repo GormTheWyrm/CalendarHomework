@@ -18,7 +18,7 @@ function displayDay() {
     } else if (myDay === 5) {
         weekDay = "Friday";
     } else if (myDay === 6) {
-        weekDay = "Sunday";
+        weekDay = "Saturday";
     }
     var dateSet = $("#today");
     $("#today").text(weekDay);
@@ -35,17 +35,25 @@ function loadEvents() {
 
     // this creates a loop for each event-name
     $(".event-name").each(function (i) {
-        //iterates 12 times. check
+        //iterates 12 times. 
+
+        //WHAT TO DO IF NO LOCAL STORAGE YET?   
+        try{
+            localStorage.getItem("eventName" + i);
+        }
+        catch (e){
+            localStorage.setItem("eventName" + i, " ");
+        }
+        //was supposed to catch error with microsoft edge
 
 
         //load local storate data
         // $(this).text("test" + i);
         //load from local storage under name (eventName+i)
-        var loadMe = localStorage.getItem("eventName"+i);
+        var loadMe = localStorage.getItem("eventName" + i);
         this.textContent = loadMe;
 
 
-        //append
 
 
 
@@ -62,7 +70,9 @@ function loadEvents() {
 
 }
 
+
 function initCalendar() {
+
     displayDay();
     loadEvents();
 
@@ -93,11 +103,11 @@ function saveEvent() {
         // console.log($(this).attr(text));  does not work
 
 
-            
 
-    localStorage.setItem("eventName"+i, this.textContent);
-                // 
- 
+
+        localStorage.setItem("eventName" + i, this.textContent);
+        // 
+
     });
 }
 
