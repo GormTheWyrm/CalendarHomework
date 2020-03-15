@@ -120,3 +120,10 @@ $(document).ready($(".edit-btn").on("click", function () {
     loadEvents();
 
 }));
+
+
+
+// error log;
+//set up local storage if none
+//make save button save specific hour instead of all of them
+//save data upon hitting "enter"
