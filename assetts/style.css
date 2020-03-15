@@ -3,18 +3,14 @@ body{
     font-weight: 500;
     /* test link to stylesheet */
 }
-/* active-time class which JS can change? */
+
 .timeblock{
-    /* border-top: solid grey;
-    border-bottom: solid grey; */
-    /* display: inline-block; */
-    /* width should be 100%... */
     height: 50px;
     margin-bottom: 1px;
-    /* not sure if I like this */
 }
 /* hour, event-name, edit as 3 main compenents within timeblock 
-edit is now a button*/
+edit is now a button
+*/
 .hour{
 border-right: solid grey;
 display: inline-block;
@@ -30,9 +26,7 @@ text-align: left;
     border-right: solid grey;
 }
 .edit-div{
-    /* margin-left: 0px; */
     padding-left: 2px;
-    /* background-color: lightcoral; */
     display: inline-block;
 }
 
@@ -43,6 +37,5 @@ text-align: left;
         position: relative;
         left: -15px;
         }
-        /* I need to fix this later probably */
+    
 }
-/* this may break on really small screens */

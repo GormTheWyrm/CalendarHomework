@@ -1,9 +1,8 @@
 function displayDay() {
-    console.log("this function will display the day of the week");
     //can I put grab the date from an online calendar?
     var todayDate = new Date();
     var myDay = todayDate.getDay();
-    // console.log(myDay);
+
     var weekDay;
     if (myDay === 0) {
         weekDay = "Sunday";
@@ -24,39 +23,27 @@ function displayDay() {
     $("#today").text(weekDay);
 }
 function loadEvents() {
-    console.log("~~~~~~~~~~~~~~~~~~~~");
-    console.log("this needs to load the event-name div text from local storage");
-    console.log("this needs to display event-name text");
-    console.log("should this change colors?");
     myDate = new Date();
     myHour = myDate.getHours();
     myHour = parseInt(myHour);
-    // console.log("myHour is " + myHour);
 
     // this creates a loop for each event-name
     $(".event-name").each(function (i) {
         //iterates 12 times. 
 
         //WHAT TO DO IF NO LOCAL STORAGE YET?   
-        try{
-            localStorage.getItem("eventName" + i);
-        }
-        catch (e){
-            localStorage.setItem("eventName" + i, " ");
-        }
+        // try{
+        //     localStorage.getItem("eventName" + i);
+        // }
+        // catch (e){
+        //     localStorage.setItem("eventName" + i, " ");
+        // }
         //was supposed to catch error with microsoft edge
 
 
-        //load local storate data
-        // $(this).text("test" + i);
         //load from local storage under name (eventName+i)
         var loadMe = localStorage.getItem("eventName" + i);
         this.textContent = loadMe;
-
-
-
-
-
 
         //sets color
         if (myHour > (i + 7)) {
@@ -79,34 +66,11 @@ function initCalendar() {
 
 }
 function saveEvent() {
-    console.log("this should save event names");
-    //need to figure out how to select the desired .event-name div
-    //prev()
-    // console.log(this);
-    // console.log(event.target);
-    // console.log($(event.target));
-    // console.log($(event.target).prev("div"));
-    // .prev());
-    // var saveMe = $(event.target).prev("div");
-    // console.log(saveMe);
-    // console.log("------------");
-    // console.log($(".eight"));
-    // JSON.stringify(saveMe);
-    // console.log(saveMe);
-    // console.log(saveMe.textContent);
-    //...I guess it might be easier just to save everything?
+
 
     $(".event-name").each(function (i) {
-        //
-        // console.log(this.textContent);
-        //I do not know how to console.log this with jQuery
-        // console.log($(this).attr(text));  does not work
-
-
-
 
         localStorage.setItem("eventName" + i, this.textContent);
-        // 
 
     });
 }
@@ -123,7 +87,7 @@ $(document).ready($(".edit-btn").on("click", function () {
 
 
 
-// error log;
-//set up local storage if none
+//Current bug and desirable future implementations;
+//mysterious microsoft Edge error
 //make save button save specific hour instead of all of them
 //save data upon hitting "enter"
